@@ -2,7 +2,16 @@ layout: {zmk_keyboard: temper}
 layers:
   default:
   - [SV Q, SV W, SV E, SV R, SV T, SV Y, SV U, SV I, SV O, SV P]
-  - [SV A, SV S, SV D, SV F, SV G, SV H, SV J, SV K, SV L, minus under]
+  - - SV A
+    - SV S
+    - SV D
+    - SV F
+    - SV G
+    - SV H
+    - SV J
+    - SV K
+    - SV L
+    - {t: SV MINUS, s: SV UNDER}
   - - SV Z
     - SV X
     - SV C
