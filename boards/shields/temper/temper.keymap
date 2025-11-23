@@ -50,13 +50,13 @@
         comma_semi: comma_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
+            bindings = <&kp SV_COMMA>, <&kp SV_SEMI>;
             mods = <(MOD_LSFT)>;
         };
         dot_colon: dot_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
+            bindings = <&kp SV_DOT>, <&kp SV_COLON>;
             mods = <(MOD_LSFT)>;
         };
         qmrk_excl: qmrk_excl {
@@ -81,12 +81,32 @@
         keymap {
                 compatible = "zmk,keymap";
 
+    chords {
+        compatible = "zmk,chords";
+
+        u_i_to_aring {
+            timeout-ms = <30>;
+            bindings = <&kp SV_A_RING>;
+            key-positions = <6 7>; 
+        };
+                h_j_to_aumlaut {
+            timeout-ms = <30>;
+            bindings = <&kp SV_A_UMLAUT>;
+            key-positions = <15 16>; 
+        };
+                m_comma_to_oumlaut{
+            timeout-ms = <30>;
+            bindings = <&kp SV_O_UMLAUT>;
+            key-positions = <26 27>;
+        };
+    };
+
                 default_layer {
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O       &kp P   
+        &kp SV_Q    &kp SV_W      &kp SV_E      &kp SV_R      &kp SV_T          &kp SV_Y       &kp SV_U         &kp SV_I         &kp SV_O       &kp SV_P   
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp A         &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K         &kp L         &kp O
+        &kp SV_A         &kp SV_S         &kp SV_D         &kp SV_F         &kp SV_G             &kp SV_H         &kp SV_J         &kp SV_K         &kp SV_L         &kp SV_O
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M      &comma_semi    &dot_colon    &qmrk_excl
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
