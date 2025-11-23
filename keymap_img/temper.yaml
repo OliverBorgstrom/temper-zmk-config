@@ -198,7 +198,7 @@ layers:
 combos:
 - p: [6, 7]
   k: SV A RING
-- p: [15, 16]
+- p: [16, 17]
   k: SV A UMLAUT
 - p: [26, 27]
   k: SV O UMLAUT
