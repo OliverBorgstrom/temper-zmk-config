@@ -2,14 +2,14 @@ layout: {zmk_keyboard: temper}
 layers:
   default:
   - [SV Q, SV W, SV E, SV R, SV T, SV Y, SV U, SV I, SV O, SV P]
-  - [SV A, SV S, SV D, SV F, SV G, SV H, SV J, SV K, SV L, SV O]
-  - - Z
-    - X
-    - C
-    - V
-    - B
-    - N
-    - M
+  - [SV A, SV S, SV D, SV F, SV G, SV H, SV J, SV K, SV L, minus under]
+  - - SV Z
+    - SV X
+    - SV C
+    - SV V
+    - SV B
+    - SV N
+    - SV M
     - {t: SV COMMA, s: SV SEMI}
     - {t: SV DOT, s: SV COLON}
     - {t: SV QMARK, s: SV EXCL}
@@ -19,69 +19,14 @@ layers:
     - SPACE
     - nav
     - {t: default, h: toggle}
-  game:
-  - - ↹
-    - Q
-    - W
-    - E
-    - R
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - ⇧
-    - A
-    - S
-    - D
-    - F
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - ⌃
-    - Z
-    - X
-    - C
-    - V
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - ESC
-    - {t: ▽, type: trans}
-    - SPACE
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
   num:
-  - - '~'
-    - '@'
-    - '{'
-    - '}'
-    - '%'
-    - '*'
-    - '7'
-    - '8'
-    - '9'
-    - {t: '-', s: _}
-  - [^, '#', (, ), $, _, '4', '5', '6', +]
-  - - {t: '&', s: '|'}
-    - <
-    - {t: '[', s: '{'}
-    - {t: ']', s: '}'}
-    - '>'
-    - {t: /, s: \}
-    - '1'
-    - '2'
-    - '3'
-    - {t: '=', s: +}
+  - ['~', SV GRAVE, SV APOS, SV DQT, '%', SV STAR, '7', '8', '9', '0']
+  - [SV LT, SV LBRC, SV LPAR, SV LBKT, SV DLLR, SV BSLH, '4', '5', '6', SV PLUS]
+  - [SV GT, SV RBRC, SV RPAR, SV RBKT, SV AT, SV FSLH, '1', '2', '3', SV EQUAL]
   - - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
-    - '0'
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   nav:
@@ -100,11 +45,11 @@ layers:
     - {t: ⎇, h: sticky}
     - {t: ⌘, h: sticky}
     - {t: ▽, type: trans}
+    - {t: ESC, s: '`'}
     - ←
     - ↓
     - ↑
     - →
-    - {t: ESC, s: '`'}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -195,10 +140,50 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+  game:
+  - - ↹
+    - Q
+    - W
+    - E
+    - R
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - ⇧
+    - A
+    - S
+    - D
+    - F
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - ⌃
+    - Z
+    - X
+    - C
+    - V
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - ESC
+    - {t: ▽, type: trans}
+    - SPACE
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
 combos:
 - p: [6, 7]
   k: SV A RING
+  l: [default]
 - p: [16, 17]
   k: SV A UMLAUT
+  l: [default]
 - p: [26, 27]
   k: SV O UMLAUT
+  l: [default]
