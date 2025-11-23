@@ -12,7 +12,7 @@ layers:
     - M
     - {t: ',', s: ;}
     - {t: ., s: ':'}
-    - {t: '?', s: '!'}
+    - {t: SV QMARK, s: SV EXCL}
   - - cmd
     - num
     - {t: ⇧, s: ⇪}
