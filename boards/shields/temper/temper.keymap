@@ -78,10 +78,8 @@
             mods = <(MOD_LSFT)>;
         };
     };
-        keymap {
-                compatible = "zmk,keymap";
 
-    chords {
+        chords {
         compatible = "zmk,chords";
 
         u_i_to_aring {
@@ -100,6 +98,9 @@
             key-positions = <26 27>;
         };
     };
+    
+        keymap {
+                compatible = "zmk,keymap";
 
                 default_layer {
                         bindings = <
