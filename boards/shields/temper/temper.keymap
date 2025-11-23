@@ -79,26 +79,26 @@
         };
     };
 
-        chords {
-        compatible = "zmk,chords";
+        combos {
+        compatible = "zmk,combos";
 
-        u_i_to_aring {
+        combo_u_i_to_aring {
             timeout-ms = <30>;
             bindings = <&kp SV_A_RING>;
             key-positions = <6 7>; 
         };
-                h_j_to_aumlaut {
+        combo_h_j_to_aumlaut {
             timeout-ms = <30>;
             bindings = <&kp SV_A_UMLAUT>;
             key-positions = <15 16>; 
         };
-                m_comma_to_oumlaut{
+        combo_m_comma_to_oumlaut{
             timeout-ms = <30>;
             bindings = <&kp SV_O_UMLAUT>;
             key-positions = <26 27>;
         };
     };
-    
+
         keymap {
                 compatible = "zmk,keymap";
 
