@@ -1,8 +1,8 @@
 layout: {zmk_keyboard: temper}
 layers:
   default:
-  - [Q, W, E, R, T, Y, U, I, O, P]
-  - [A, S, D, F, G, H, J, K, L, O]
+  - [SV Q, SV W, SV E, SV R, SV T, SV Y, SV U, SV I, SV O, SV P]
+  - [SV A, SV S, SV D, SV F, SV G, SV H, SV J, SV K, SV L, SV O]
   - - Z
     - X
     - C
@@ -10,8 +10,8 @@ layers:
     - B
     - N
     - M
-    - {t: ',', s: ;}
-    - {t: ., s: ':'}
+    - {t: SV COMMA, s: SV SEMI}
+    - {t: SV DOT, s: SV COLON}
     - {t: SV QMARK, s: SV EXCL}
   - - cmd
     - num
