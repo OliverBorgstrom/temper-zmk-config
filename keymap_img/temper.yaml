@@ -185,7 +185,7 @@ layers:
     - SV STAR
     - {t: ▽, type: trans}
     - SV FRAC 1 2
-    - SV SV PRCNT
+    - SV PRCNT
     - SV MINUS
   - [SV LT, SV LBRC, SV LPAR, SV LBKT, SV DLLR, SV BSLH, SV AMPS, SV PIPE, SV POUND, SV PLUS]
   - - SV GT
