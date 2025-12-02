@@ -205,7 +205,7 @@
                 sym_layer {
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp SV_TILDE  &kp SV_GRAVE  &kp SV_APOS   &kp SV_DQT    &kp SV_ACUTE      &kp SV_STAR      ______   &kp SV_FRAC_1_2 &kp SV_SV_PRCNT &kp SV_MINUS
+     &kp SV_TILDE  &kp SV_GRAVE  &kp SV_APOS   &kp SV_DQT    &kp SV_ACUTE      &kp SV_STAR      ______   &kp SV_FRAC_1_2 &kp SV_PRCNT &kp SV_MINUS
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &kp SV_LT    &kp SV_LBRC   &kp SV_LPAR   &kp SV_LBKT   &kp SV_DLLR       &kp SV_BSLH   &kp SV_AMPS   &kp SV_PIPE   &kp SV_POUND  &kp SV_PLUS 
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
