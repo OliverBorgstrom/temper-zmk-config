@@ -68,7 +68,7 @@ layers:
   nav:
   - - '&ml_cmnt'
     - '&rm_imp'
-    - {t: ▽, type: trans}
+    - '&fm_doc'
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - DEL
