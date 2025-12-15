@@ -119,13 +119,22 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
-                rm_imp: rm_imp {
+        rm_imp: rm_imp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LALT &kp LSHFT>
                 , <&macro_tap &kp SV_O>
                 , <&macro_release &kp LALT &kp LSHFT>
+                ;
+        };
+        fm_doc: fm_doc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT &kp LALT>
+                , <&macro_tap &kp SV_F>
+                , <&macro_release &kp LSHFT &kp LALT>
                 ;
         };
     };
@@ -164,7 +173,7 @@
                 nav_layer {
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-       &ml_cmnt      &rm_imp        ______        ______        ______           &kp DEL       &kp HOME      &kp END       &kp TAB       &kp BSPC
+       &ml_cmnt      &rm_imp       &fm_doc        ______        ______           &kp DEL       &kp HOME      &kp END       &kp TAB       &kp BSPC
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &sk LSHFT     &sk LCTRL      &sk LALT      &sk LGUI       ______           &gresc        &kp LEFT       &kp DOWN      &kp UP       &kp RIGHT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
