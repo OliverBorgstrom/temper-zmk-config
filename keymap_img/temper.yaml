@@ -86,15 +86,15 @@ layers:
     - ↓
     - ↑
     - →
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - Ctl+Z
+    - Ctl+X
+    - Ctl+C
+    - Ctl+V
+    - Ctl+Y
     - {t: ▽, type: trans}
     - RET
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - PG DN
+    - PG UP
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -167,43 +167,6 @@ layers:
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
-  cmd:
-  - - ⌘Q
-    - ⌘W
-    - F
-    - Gui+P
-    - B
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - ⇧
-    - ⌃
-    - ⎇
-    - ⌘
-    - Gui+G
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - ⌘Z
-    - ⌘X
-    - ⌘C
-    - D
-    - ⌘V
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
 combos:
 - p: [6, 7]
   k: SV A RING
@@ -213,4 +176,10 @@ combos:
   l: [default]
 - p: [26, 27]
   k: SV O UMLAUT
+  l: [default]
+- p: [12, 13]
+  k: {t: ⌫, s: ⌦}
+  l: [default]
+- p: [22, 23]
+  k: RET
   l: [default]
