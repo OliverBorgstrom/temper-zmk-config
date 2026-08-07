@@ -15,7 +15,6 @@
 #define NAV 2
 #define SYM 3
 #define FUN 4
-#define CMD 5
 
 
 # define ______ &trans
@@ -35,12 +34,6 @@
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
-        };
-        super_bspc: super_backspace {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         smart_shft: smart_shift {
             compatible = "zmk,behavior-mod-morph";
@@ -66,18 +59,6 @@
             bindings = <&kp SV_QMARK>, <&kp SV_EXCL>;
             mods = <(MOD_LSFT)>;
         };
-        slh_morph: slh_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH>, <&kp BSLH>;
-            mods = <(MOD_LSFT)>;
-        };
-        amps_morph: amps_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp AMPS>, <&kp PIPE>;
-            mods = <(MOD_LSFT)>;
-        };
         minus_under: minus_under {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -95,7 +76,7 @@
             key-positions = <6 7>;
             layers = <0>;
         };
-        combo_h_j_to_aumlaut {
+        combo_j_k_to_aumlaut {
             timeout-ms = <50>;
             bindings = <&kp SV_A_UMLAUT>;
             key-positions = <16 17>;
@@ -105,6 +86,18 @@
             timeout-ms = <50>;
             bindings = <&kp SV_O_UMLAUT>;
             key-positions = <26 27>;
+            layers = <0>;
+        };
+        combo_backspace {
+            timeout-ms = <50>;
+            bindings = <&bspc_del>;
+            key-positions = <12 13>;
+            layers = <0>;
+        };
+        combo_enter {
+            timeout-ms = <50>;
+            bindings = <&kp RET>;
+            key-positions = <22 23>;
             layers = <0>;
         };
     };
@@ -177,7 +170,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &sk LSHFT     &sk LCTRL      &sk LALT      &sk LGUI       ______           &gresc        &kp LEFT       &kp DOWN      &kp UP       &kp RIGHT
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        ______        ______        ______        ______        ______            ______       &kp RET        ______        ______        ______
+      &kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)     &kp LC(Y)         ______       &kp RET       &kp PG_DN     &kp PG_UP      ______
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                     ______        ______        ______            ______        ______        ______
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
@@ -206,20 +199,6 @@
      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4         ______        &kp F4        &kp F5        &kp F6       &kp F11
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &bt BT_CLR    &kp C_PREV     &kp C_PP     &kp C_NEXT   &out OUT_BLE         ______        &kp F1        &kp F2        &kp F3       &kp F10
-// ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                    ______        ______        ______            ______        ______        ______
-//                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
-                        >;
-                };
-
-                cmd_layer {
-                        bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-       &kp LG(Q)    &kp LG(W)       &kp F       &kp LG(P)       &kp B             ______        ______        ______        ______        ______  
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &kp LSHFT    &kp LCTRL     &kp LALT      &kp LGUI      &kp LG(G)           ______        ______        ______        ______        ______
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &kp LG(Z)    &kp LG(X)     &kp LG(C)       &kp D       &kp LG(V)           ______        ______        ______        ______        ______
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                     ______        ______        ______            ______        ______        ______
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
