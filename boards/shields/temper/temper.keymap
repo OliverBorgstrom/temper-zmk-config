@@ -90,19 +90,19 @@
         compatible = "zmk,combos";
 
         combo_u_i_to_aring {
-            timeout-ms = <30>;
+            timeout-ms = <50>;
             bindings = <&kp SV_A_RING>;
             key-positions = <6 7>;
             layers = <0>;
         };
         combo_h_j_to_aumlaut {
-            timeout-ms = <30>;
+            timeout-ms = <50>;
             bindings = <&kp SV_A_UMLAUT>;
             key-positions = <16 17>;
             layers = <0>;
         };
         combo_m_comma_to_oumlaut{
-            timeout-ms = <30>;
+            timeout-ms = <50>;
             bindings = <&kp SV_O_UMLAUT>;
             key-positions = <26 27>;
             layers = <0>;
