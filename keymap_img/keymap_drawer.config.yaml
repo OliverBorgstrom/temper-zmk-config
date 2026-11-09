@@ -163,6 +163,20 @@ parse_config:
     '&mm_grescm': {t: '⎋', s: '` ~'}
     '&mm_bspc_del': {t: '⌫', s: '⌦'}
     '&bspc_del': {t: '⌫', s: '⌦'}
+    '&kp LG(LC(LS(N4)))': {t: '⌘⌃⇧4', s: 'Skärmdump'}
+    '&kp PSCRN': {t: 'PSCRN', s: 'Skärmdump'}
+    '&kp LG(LS(N7))': {t: '⌘⇧7', s: 'Kommentar'}
+    '&ml_cmnt': {t: "Ctrl+'", s: 'Kommentar'}
+    '&rm_imp': {t: '⇧⌥O', s: 'Imports'}
+    '&fm_doc': {t: '⇧⌥F', s: 'Format'}
+    '&kp LG(LS(Z))': '⌘⇧Z'
+    '&kp LS(LA(N8))': '{'
+    '&kp LS(LA(N9))': '}'
+    '&kp LA(N7)': '|'
+    '&kp LS(LA(N7))': '\'
+    '&kp GRAVE': '<'
+    '&kp LS(GRAVE)': '>'
+    '&kp NUBS': '§'
     '&mm_grescm_gui': {t: ⎋, h: ⌘, s: '~ `'}
     '&mm_spc_unds_layer': {t: '⎵', h: 'SYM', s: '_ -'}
     '&mm_plus_minus': {t: '+', s: '-'}

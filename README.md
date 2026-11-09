@@ -23,10 +23,30 @@ Swedish QWERTY base, tuned for programming and text editing.
 | # | Layer | Access |
 |---|-------|--------|
 | 0 | Default (QWERTY) | — |
-| 1 | Num | hold right thumb |
-| 2 | Nav | hold right thumb |
-| 3 | Sym | hold left thumb |
-| 4 | Fun | Nav + Sym held together (conditional) |
+| 1 | Win | toggled from Fun |
+| 2 | Num | hold right thumb |
+| 3 | Nav | hold right thumb |
+| 4 | Win Nav | Win + Nav (conditional) |
+| 5 | Sym | hold left thumb |
+| 6 | Win Sym | Win + Sym (conditional) |
+| 7 | Fun | Nav + Sym held together (conditional) |
+| 8 | Win Fun | Win + Fun (conditional) |
+
+### Mac / Windows mode
+
+The keymap targets **macOS with the Swedish layout** by default. The `Win` key on the Fun layer toggles Windows mode, which overlays only the keys that differ:
+
+| | Mac (default) | Windows |
+|---|---|---|
+| Left thumb | ⌘ Cmd | Ctrl |
+| Undo / cut / copy / paste / redo | ⌘Z ⌘X ⌘C ⌘V ⌘⇧Z | Ctrl+Z/X/C/V/Y |
+| Line start / end | ⌘← / ⌘→ | Home / End |
+| Toggle line comment (VS Code) | ⌘⇧7 | Ctrl+' |
+| `{` `}` `\|` `\` | ⇧⌥8, ⇧⌥9, ⌥7, ⇧⌥7 | AltGr+7, 0, <, + |
+| `< >` | HID 0x35 (macOS swaps it with §) | HID 0x64 |
+| Screenshot (area) | ⌘⌃⇧4 → clipboard | Print Screen |
+
+ZMK does not persist the toggle, so the board always starts in Mac mode after a reset or deep sleep. Combos are enabled on both the Default and Win layers.
 
 ### Combos (default layer)
 
@@ -49,7 +69,7 @@ Swedish QWERTY base, tuned for programming and text editing.
 
 ## Battery
 
-Both halves report their battery level over BLE — the central (left) half proxies the peripheral's level via `CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY` and `CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING`. Windows only shows a single level in its own UI, so use a tray app such as [zmk-battery-center](https://github.com/kot149/zmk-battery-center) to see both halves.
+Both halves report their battery level over BLE — the central (left) half proxies the peripheral's level via `CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY` and `CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING`. Windows and macOS only show a single level in their own UI, so use an app such as [zmk-battery-center](https://github.com/kot149/zmk-battery-center) to see both halves.
 
 ## Building & flashing
 
